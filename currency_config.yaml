@@ -1,0 +1,14 @@
+api_url: 'https://api.uphold.com/v0/ticker'
+change_threshold: 0.000001
+check_interval: 2
+pairs:
+  - BTC-USD
+  - BTC-EUR
+  - ETH-USD
+  - ETH-EUR
+  - LTC-USD
+  - LTC-EUR
+  - XRP-USD
+  - XRP-EUR
+  - BCH-USD
+  - BCH-EUR

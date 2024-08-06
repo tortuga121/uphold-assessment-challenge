@@ -1,0 +1,5 @@
+aiohttp~=3.10.1
+boto3~=1.34.131
+pyyaml~=6.0.1
+python-dotenv~=1.0.1
+aiobotocore~=2.13.1

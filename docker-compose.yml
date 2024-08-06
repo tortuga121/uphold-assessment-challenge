@@ -1,0 +1,23 @@
+services:
+  app:
+    build:
+      context: .
+    container_name: currency_monitor
+    volumes:
+      - .:/app
+    ports:
+      - "9000:9000" 
+    environment:
+      - DYNAMO_ENDPOINT=http://dynamodb:8000
+      - REGION_NAME=us-west-2
+      - AWS_ACCESS_KEY_ID=fakeAccessKeyId
+      - AWS_SECRET_ACCESS_KEY=fakeSecretAccessKey
+    depends_on:
+      - dynamodb
+
+  dynamodb:
+    image: amazon/dynamodb-local
+    container_name: dynamodb_local
+    ports:
+      - "8000:8000"  
+    command: "-jar DynamoDBLocal.jar -sharedDb -inMemory"
